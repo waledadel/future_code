@@ -13,10 +13,6 @@ import { DemoComponent } from './demo/demo.component';
 export class AppComponent {
 
   data = {
-    title: 'Angular Core Course!',
-    count: 10,
-    course: {
-      name: 'Test'
-    }
+    title: 'Angular Core Course!'
   };
 }
