@@ -2,7 +2,7 @@
     <div class="ps-2">
         <h1>Future Code - {{data.title}}</h1>
         <ng-container>
-            Lesson 8: Sharing data between child and parent components by &#64;Input Decorator
+            Lesson 7: Sharing data between child and parent components by &#64;Input Decorator
         </ng-container>
     </div>
     <img src="assets/images/future_code.png" alt="image" class="channel-logo" loading="lazy" />
@@ -11,20 +11,9 @@
 <div class="container-fluid">
     <div class="row mt-2">
         <div class="col-md-4 col-12">
-            <div class="course-card rounded text-center">
-                <div class="fw-bold p-2 course-title">
-                    Angular For Beginners
-                </div>
-                <div>
-                    <img src="assets/images/angular_for_beginners.png" alt="img" loading="lazy" class="w-100" />
-                </div>
-                <div class="course-description p-2 text-start">
-                    After completing this course, you'll gain a practical, 
-                    hands-on understanding of the Angular framework. 
-                    You'll feel confident in navigating existing Angular applications 
-                    and adept at building your own custom components.
-                </div>
-            </div>
+            <app-course-card [course]="beginnerCourse"></app-course-card>
+            <app-course-card [course]="rxjsCourse"></app-course-card>
+            <app-course-card [course]="ngrxCourse"></app-course-card>
         </div>
     </div>
 </div>

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CategoryType, ICourse } from './app.component.models';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CourseCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,7 +23,7 @@ export class AppComponent {
       description: 'Angular 17 for beginners',
       imageUrl: 'assets/images/angular_for_beginners.png',
       lessonsCount: 70,
-      longDescription: '',
+      longDescription: 'Test a desc',
       category: CategoryType.beginners
     },
     {
@@ -42,4 +43,8 @@ export class AppComponent {
       category: CategoryType.advanced
     }
   ];
+
+  beginnerCourse = this.courses[0];
+  rxjsCourse = this.courses[1];
+  ngrxCourse = this.courses[2];
 }
