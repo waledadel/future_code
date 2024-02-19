@@ -2,7 +2,7 @@
     <div class="ps-2">
         <h1>Future Code - {{data.title}}</h1>
         <ng-container>
-            Lesson 8: Sharing data between child and parent components by &#64;Output Decorator (Custom Events and Event Emitters)
+            Lesson 9: Self-closing tags in Angular 16 and later versions
         </ng-container>
     </div>
     <img src="assets/images/future_code.png" alt="image" class="channel-logo" loading="lazy" />
@@ -11,9 +11,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 col-12">
-            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="beginnerCourse"></app-course-card>
-            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="rxjsCourse"></app-course-card>
-            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxCourse"></app-course-card>
+            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="beginnerCourse" />
+            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="rxjsCourse" />
+            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxCourse" />
         </div>
     </div>
 </div>
