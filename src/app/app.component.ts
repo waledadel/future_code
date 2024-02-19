@@ -47,4 +47,8 @@ export class AppComponent {
   beginnerCourse = this.courses[0];
   rxjsCourse = this.courses[1];
   ngrxCourse = this.courses[2];
+
+  onCourseClicked(course: ICourse): void {
+    console.log('on course clicked!', course.description);
+  }
 }

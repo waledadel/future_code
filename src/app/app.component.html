@@ -11,9 +11,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4 col-12">
-            <app-course-card [course]="beginnerCourse"></app-course-card>
-            <app-course-card [course]="rxjsCourse"></app-course-card>
-            <app-course-card [course]="ngrxCourse"></app-course-card>
+            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="beginnerCourse"></app-course-card>
+            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="rxjsCourse"></app-course-card>
+            <app-course-card (viewCourseEvent)="onCourseClicked($event)" [course]="ngrxCourse"></app-course-card>
         </div>
     </div>
 </div>
