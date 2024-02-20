@@ -10,3 +10,21 @@
 .course-description {
     user-select: none;
 }
+
+.first-course {
+    border-top: 2px solid gray;
+    padding-top: 20px;
+}
+
+.last-course {
+    border-bottom: 2px solid gray;
+    padding-top: 20px;
+}
+
+.even-course {
+    background-color: lightgray;
+}
+
+.odd-course {
+    background-color: lightcyan;
+}
