@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { CategoryType, ICourse } from './app.component.models';
 import { CourseCardComponent } from './course-card/course-card.component';
 
