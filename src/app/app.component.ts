@@ -74,7 +74,7 @@ export class AppComponent {
     {
       id: 6,
       description: 'Bootstrap 5',
-      imageUrl: 'assets/images/bootstrap_5.PNG',
+      imageUrl: 'assets/images/bootstrap_5.png',
       lessonsCount: 48,
       longDescription: `Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, 
         utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.`,
