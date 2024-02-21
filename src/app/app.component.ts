@@ -15,7 +15,8 @@ import { CourseCardComponent } from './course-card/course-card.component';
 export class AppComponent {
 
   data = {
-    title: 'Angular Core Course!'
+    courseName: 'Angular Core Course!',
+    lessonName: 'Lesson 12: Understanding Angular 17 @for tracking functions'
   };
 
   readonly courses: Array<ICourse> = courses;
