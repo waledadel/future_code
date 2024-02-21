@@ -16,7 +16,7 @@ export class AppComponent {
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: 'Lesson 12: Understanding Angular 17 @for tracking functions'
+    lessonName: '13- Angular *ngFor Core Directive (Syntax before Angular 17)'
   };
 
   readonly courses: Array<ICourse> = courses;
