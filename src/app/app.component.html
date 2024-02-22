@@ -10,30 +10,14 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- @for (course of courses; track course.id;
-            let count = $count) {
-                Courses Count: {{count}}
-            <div class="col-md-4 col-12">
-                <app-course-card [course]="course" [index]="$index"
-                    [class.first-course]="$first"
-                    [class.last-course]="$last"
-                    [class.even-course]="$even"
-                    [class.odd-course]="$odd"
-                    (viewCourseEvent)="onCourseClicked($event)" />
-            </div>
-        } @empty {
-            <h1>No Courses Found!</h1>
-        } -->
-
-        <div *ngFor="let course of courses; index as i; first as isFirst;
-            last as last; even as even; odd as odd; count as count" class="col-md-4 col-12">
-            {{count}}
-            <app-course-card [course]="course" [index]="i"
-                [class.first-course]="isFirst"
-                [class.last-course]="last"
-                [class.even-course]="even"
-                [class.odd-course]="odd"
+        @for (course of courses; track course.id) {
+        <div class="col-md-4 col-12">
+            <app-course-card [course]="course" [index]="$index" [class.first-course]="$first"
+                [class.last-course]="$last" [class.even-course]="$even" [class.odd-course]="$odd"
                 (viewCourseEvent)="onCourseClicked($event)" />
         </div>
+        } @empty {
+        <h1>No Courses Found!</h1>
+        }
     </div>
 </div>
