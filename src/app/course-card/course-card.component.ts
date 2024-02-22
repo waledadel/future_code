@@ -1,5 +1,6 @@
-import { ICourse } from './../app.component.models';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { ICourse } from './../app.component.models';
 
 @Component({
   selector: 'app-course-card',
