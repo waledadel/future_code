@@ -1,15 +1,18 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { ICourse } from './../app.component.models';
+import { CategoryType, ICourse } from './../app.component.models';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-course-card',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
 export class CourseCardComponent {
+
+  categoryType = CategoryType;
 
   @Input({required: true}) course: ICourse = {} as ICourse;
   @Input({required: true}) index!: number;
@@ -17,5 +20,9 @@ export class CourseCardComponent {
 
   viewCourse(): void {
     this.viewCourseEventEmitter.emit(this.course);
+  }
+
+  getCssClass(): string {
+    return 'beginner';
   }
 }
