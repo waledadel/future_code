@@ -17,7 +17,7 @@ export class AppComponent {
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '15- Angular 17 @if else syntax'
+    lessonName: '16- Angular *ngIf Directive and the Elvis Operator'
   };
 
   readonly courses: Array<ICourse> = courses;
