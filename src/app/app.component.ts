@@ -17,7 +17,7 @@ export class AppComponent {
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '18- Angular ngStyle Core Directive - When to use it and Why'
+    lessonName: '19- Angular 17 @switch syntax'
   };
 
   readonly courses: Array<ICourse> = courses;

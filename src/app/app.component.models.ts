@@ -9,7 +9,9 @@ export interface ICourse {
 
 export enum CategoryType {
   beginners = 1,
-  advanced = 2
+  intermediate = 2,
+  advanced = 3,
+  other
 }
 
 
@@ -32,7 +34,7 @@ export const courses: Array<ICourse> = [
     longDescription: `We will then write our own Observable from first principles: 
         we will implement our own HTTP observable that will allow us to handle backend HTTP 
         requests while supporting error handling and cancellation.`,
-    category: CategoryType.advanced
+    category: CategoryType.intermediate
   },
   {
     id: 3,
@@ -65,7 +67,7 @@ export const courses: Array<ICourse> = [
         also know when to use them and why. You will be familiar with Angular testing best practices, and you will know 
         how to write useful tests that don't take a lot of time to write and that contribute a lot for the long term 
         health of your project.`,
-    category: CategoryType.advanced
+    category: CategoryType.other
   },
   {
     id: 6,
