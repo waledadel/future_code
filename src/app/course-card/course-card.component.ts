@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { CategoryType, ICourse } from './../app.component.models';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-course-card',
@@ -20,9 +20,5 @@ export class CourseCardComponent {
 
   viewCourse(): void {
     this.viewCourseEventEmitter.emit(this.course);
-  }
-
-  getCssClass(): string {
-    return 'beginner';
   }
 }
