@@ -17,7 +17,7 @@ export class AppComponent {
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '19- Angular 17 @switch syntax'
+    lessonName: '20- Angular ngSwitch Core Directive Explained (Syntax Prior to v17)'
   };
 
   readonly courses: Array<ICourse> = courses;
