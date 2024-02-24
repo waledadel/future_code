@@ -17,7 +17,7 @@ export class AppComponent {
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '20- Angular ngSwitch Core Directive Explained (Syntax Prior to v17)'
+    lessonName: '21- Angular Built-In Pipes Part 1 - Transforming Data Using Pipes'
   };
 
   readonly courses: Array<ICourse> = courses;
