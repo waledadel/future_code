@@ -1,12 +1,15 @@
-<div class="p-2 text-light d-flex justify-content-between channel-name">
-    <div class="ps-2">
-        <h1>Future Code - {{data.courseName}}</h1>
-        <ng-container>
-            {{data.lessonName}}
-        </ng-container>
-    </div>
-    <img src="assets/images/future_code.png" alt="course_image" class="channel-logo" loading="lazy" />
+<div class="p-2 text-light d-flex flex-column channel-name">
+    <h1>Future Code - {{data.courseName}}</h1>
+    <ng-container>{{data.lessonName}}</ng-container>
 </div>
+
+<ol>
+    <li><strong>Lowercase: </strong>{{data.courseName | lowercase}}</li>
+    <li><strong>Uppercase: </strong>{{data.courseName | uppercase}}</li>
+    <li><strong>Titlecase: </strong>{{data.courseName | titlecase}}</li>
+    <li><strong>Date: </strong>{{date | date:'MMM-dd-yyyy'}}</li>
+    <li><strong>Decimal: </strong>{{amount | number:'3.1-3'}}</li>
+</ol>
 
 <div class="container-fluid">
     <div class="row">
