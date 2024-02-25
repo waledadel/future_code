@@ -20,10 +20,8 @@ export class AppComponent {
     courseName: 'angular core Course!',
     lessonName: '22- Angular Built-In Pipes Part 2 - Transforming Data Using Pipes'
   };
-
   date = new Date();
   amount = 50.044444444444444444;
-
   readonly courses: Array<ICourse> = courses;
 
   onCourseClicked(course: ICourse): void {
