@@ -17,13 +17,10 @@ import { CourseCardComponent } from './course-card/course-card.component';
 export class AppComponent {
 
   data = {
-    courseName: 'angular core Course!',
-    lessonName: '22- Angular Built-In Pipes Part 2 - Transforming Data Using Pipes'
+    courseName: 'Angular Core Course!',
+    lessonName: '23- Component Lifecycle - Part 1'
   };
   date = new Date();
-  amount = 50.044444444444444444;
-  total = 0.75;
-  price = 10;
   readonly courses: Array<ICourse> = courses;
 
   onCourseClicked(course: ICourse): void {
