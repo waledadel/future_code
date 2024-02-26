@@ -18,7 +18,7 @@ export class AppComponent {
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '23- Component Lifecycle - Part 1'
+    lessonName: '23- Component Lifecycle - ngOnChanges - Part 1'
   };
   date = new Date();
   readonly courses: Array<ICourse> = courses;
