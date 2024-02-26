@@ -22,6 +22,8 @@ export class AppComponent {
   };
   date = new Date();
   amount = 50.044444444444444444;
+  total = 0.75;
+  price = 10;
   readonly courses: Array<ICourse> = courses;
 
   onCourseClicked(course: ICourse): void {
