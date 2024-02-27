@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CategoryType, ICourse } from './../app.component.models';
@@ -10,7 +10,7 @@ import { CategoryType, ICourse } from './../app.component.models';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent implements OnChanges {
+export class CourseCardComponent implements OnChanges, OnInit {
 
   categoryType = CategoryType;
 
@@ -24,6 +24,10 @@ export class CourseCardComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes', changes);
+    console.log('ngOnChanges', this.course.id, changes);
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit', this.course.id);
   }
 }
