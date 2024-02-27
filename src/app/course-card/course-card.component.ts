@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CategoryType, ICourse } from './../app.component.models';
@@ -10,15 +10,20 @@ import { CategoryType, ICourse } from './../app.component.models';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent {
+export class CourseCardComponent implements OnChanges {
 
   categoryType = CategoryType;
 
   @Input({required: true}) course: ICourse = {} as ICourse;
   @Input({required: true}) index!: number;
+  @Input({required: true}) title!: string;
   @Output('viewCourseEvent') viewCourseEventEmitter = new EventEmitter<ICourse>();
 
   viewCourse(): void {
     this.viewCourseEventEmitter.emit(this.course);
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('changes', changes);
   }
 }
