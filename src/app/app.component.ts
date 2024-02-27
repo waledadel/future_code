@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '23- Component Lifecycle Hook - ngOnChanges'
+    lessonName: '24- Component Lifecycle Hook - OnInit'
   };
   date = new Date();
   readonly courses: Array<ICourse> = courses;
