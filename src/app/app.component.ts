@@ -19,7 +19,8 @@ export class AppComponent implements OnInit{
 
   data = {
     courseName: 'Angular Core Course!',
-    lessonName: '25- Component Lifecycle Hook - DoCheck'
+    lessonName: '25- Component Lifecycle Hook - DoCheck',
+    title: 'Just A  Title!'
   };
   date = new Date();
   readonly courses: Array<ICourse> = courses;
@@ -30,7 +31,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     console.log('Parent ngOnInit');
-      // timer(3000).subscribe(() => this.data.lessonName = 'OnChanges Hook');
+      timer(3000).subscribe(() => this.data.title = 'OnChanges Hook');
       // timer(6000).subscribe(() => this.data.lessonName = 'OnChanges Second Time');
 
   }
