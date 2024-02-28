@@ -24,10 +24,10 @@ export class CourseCardComponent implements OnChanges, OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges', this.course.id, changes);
+    console.log(`%c ngOnChanges ${this.course.id}`, 'color: red');
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit', this.course.id);
+    console.log(`%c ngOnInit ${this.course.id}`, 'color: yellow');
   }
 }

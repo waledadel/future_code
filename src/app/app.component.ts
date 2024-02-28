@@ -30,8 +30,8 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log('Parent ngOnInit');
-      timer(3000).subscribe(() => this.data.title = 'OnChanges Hook');
+    console.log(`%c App Component: ngOnInit`, 'color: green');
+      // timer(3000).subscribe(() => this.data.title = 'OnChanges Hook');
       // timer(6000).subscribe(() => this.data.lessonName = 'OnChanges Second Time');
 
   }
