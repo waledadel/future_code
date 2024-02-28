@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CategoryType, ICourse } from './../app.component.models';
@@ -10,7 +10,7 @@ import { CategoryType, ICourse } from './../app.component.models';
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.scss'
 })
-export class CourseCardComponent implements OnChanges, OnInit {
+export class CourseCardComponent implements OnChanges, OnInit, DoCheck {
 
   categoryType = CategoryType;
 
@@ -29,5 +29,9 @@ export class CourseCardComponent implements OnChanges, OnInit {
 
   ngOnInit(): void {
     console.log(`%c ngOnInit ${this.course.id}`, 'color: yellow');
+  }
+
+  ngDoCheck(): void {
+    console.log(`%c ngDoCheck ${this.course.id}`, 'color: purple');
   }
 }
