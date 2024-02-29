@@ -1,18 +1,18 @@
-import { SingleSlotComponent } from './single-slot/single-slot.component';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { timer } from 'rxjs';
 
 
 import { ICourse, courses } from './app.component.models';
 import { CourseCardComponent } from './course-card/course-card.component';
-import { timer } from 'rxjs';
+import { ContentProjectionModule } from './topics/content-projection/content-projection.module';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CourseCardComponent, CommonModule, SingleSlotComponent],
+  imports: [RouterOutlet, CourseCardComponent, CommonModule, ContentProjectionModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
 
   data = {
     courseName: 'Angular for Intermediate Course!',
-    lessonName: '1- Content projection - Single-slot content projection',
+    lessonName: '2- Angular Content projection - Multi-slot content projection',
     title: 'Just A  Title!'
   };
   date = new Date();
