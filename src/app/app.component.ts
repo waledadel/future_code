@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
 
   data = {
     courseName: 'Angular for Intermediate Course!',
-    lessonName: '2- Angular Content projection - Multi-slot content projection',
+    lessonName: '3- Angular Content projection - Conditional content projection',
     title: 'Just A  Title!'
   };
   date = new Date();
