@@ -1,17 +1,10 @@
 <div class="p-2 text-light d-flex flex-column channel-name">
-    <h1>Future Code - {{data.courseName}}</h1>
+    <h1 class="text-center">Coding from A to Z</h1>
+    <h2 class="text-center">{{data.courseName}}</h2>
     <ng-container>{{data.lessonName}}</ng-container>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        @for (course of courses; track course.id) {
-        <div class="col-md-4 col-12">
-            <app-course-card [course]="course" [index]="$index" [title]="data.title"
-                (viewCourseEvent)="onCourseClicked($event)" />
-        </div>
-        } @empty {
-        <h1>No Courses Found!</h1>
-        }
-    </div>
-</div>
+
+<app-single-slot>
+    <h1>Single Slot Content Projection!</h1>
+</app-single-slot>

@@ -1,3 +1,4 @@
+import { SingleSlotComponent } from './single-slot/single-slot.component';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
@@ -11,15 +12,15 @@ import { timer } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CourseCardComponent, CommonModule],
+  imports: [RouterOutlet, CourseCardComponent, CommonModule, SingleSlotComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit{
 
   data = {
-    courseName: 'Angular Core Course!',
-    lessonName: '26- Component Lifecycle Hook - AfterContentInit',
+    courseName: 'Angular for Intermediate Course!',
+    lessonName: '1- Content projection - Single-slot content projection',
     title: 'Just A  Title!'
   };
   date = new Date();
