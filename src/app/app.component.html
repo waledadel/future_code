@@ -4,17 +4,4 @@
     <ng-container>{{data.lessonName}}</ng-container>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        @for (course of courses; track course.id) {
-        <div class="col-md-4 col-12">
-            <app-course-card [course]="course" [index]="$index" [title]="data.title"
-                (viewCourseEvent)="onCourseClicked($event)">
-                Content Projection
-            </app-course-card>
-        </div>
-        } @empty {
-        <h1>No Courses Found!</h1>
-        }
-    </div>
-</div>
+<router-outlet></router-outlet>

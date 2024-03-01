@@ -1,0 +1,11 @@
+@if (course) {
+    <div class="bg-warning m-3 rounded">
+        <div class="pt-3 px-3">
+            <h3 class="text-center">{{course.description}}</h3>
+        </div>
+        <img [src]="course.imageUrl" alt="course_image" class="w-100 course_image" />
+        <div class="p-3">
+            {{course.longDescription}}
+        </div>
+    </div>
+}

@@ -1,4 +1,5 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, 
+  EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CategoryType, ICourse } from './../app.component.models';
@@ -12,7 +13,7 @@ import { ChildViewComponent } from '../child-view/child-view.component';
   styleUrl: './course-card.component.scss'
 })
 export class CourseCardComponent implements OnChanges, OnInit, DoCheck, 
-  AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+  AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
   categoryType = CategoryType;
 
@@ -53,5 +54,9 @@ export class CourseCardComponent implements OnChanges, OnInit, DoCheck,
 
   ngAfterViewChecked(): void {
     console.log(`%c ngAfterViewChecked ${this.course.id}- ${this.childViewComp.text}`, 'color: brown');     
+  }
+
+  ngOnDestroy(): void {
+    console.log(`%c ngOnDestroy ${this.course.id}- ${this.childViewComp.text}`, 'color: pink');     
   }
 }
