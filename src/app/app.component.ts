@@ -19,8 +19,8 @@ import { ContentProjectionModule } from './topics/content-projection/content-pro
 export class AppComponent implements OnInit{
 
   data = {
-    courseName: 'Angular for Intermediate Course!',
-    lessonName: '3- Angular Content projection - Conditional content projection',
+    courseName: 'Angular for Beginner Course!',
+    lessonName: '26- Angular - Component Lifecycle Hook - AfterContentInit',
     title: 'Just A  Title!'
   };
   date = new Date();

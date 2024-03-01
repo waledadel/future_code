@@ -4,13 +4,17 @@
     <ng-container>{{data.lessonName}}</ng-container>
 </div>
 
-<app-single-slot>
-    <div>The Content!</div>
-    <h3>Just a desc</h3>
-</app-single-slot>
-
-<app-multi-slot>
-    <div>Angular 17</div>
-    <div header>Amazing!</div>
-    <div level>Level: Intermediate</div>
-</app-multi-slot>
+<div class="container-fluid">
+    <div class="row">
+        @for (course of courses; track course.id) {
+        <div class="col-md-4 col-12">
+            <app-course-card [course]="course" [index]="$index" [title]="data.title"
+                (viewCourseEvent)="onCourseClicked($event)">
+                Test
+            </app-course-card>
+        </div>
+        } @empty {
+        <h1>No Courses Found!</h1>
+        }
+    </div>
+</div>

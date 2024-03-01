@@ -2,10 +2,12 @@
     <div class="fw-bold p-2 course-title">
         <h4 class="text-danger">{{title}}</h4>
         {{index}}: {{course.description}}
+       <div>
+        <ng-content />
+       </div>
     </div>
     <div>
-        <img [src]="course.imageUrl" alt="course_image" 
-            loading="lazy" class="w-100 course_image" />
+        <img [src]="course.imageUrl" alt="course_image" class="w-100 course_image" />
     </div>
     <div class="course-description p-2 text-start">
         {{course.longDescription}}
