@@ -12,7 +12,7 @@ export class HeaderComponent {
 
   data = {
     courseName: 'Angular for Beginner Course!',
-    lessonName: 'Learn Angular in Arabic #32- Control navigation with UI elements'
+    lessonName: 'Learn Angular 17 in Arabic | #33- Angular Routing - Implementing Redirect & Wildcard notation (404) Pages'
   };
 
   isNavbarFixed = false;
