@@ -25,7 +25,6 @@ export class CourseListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(`%c Course List Component: ngOnInit`, 'color: green');
     timer(3000).subscribe(() => this.title = 'First Change');
     timer(6000).subscribe(() => this.title = 'Second Change');
   }

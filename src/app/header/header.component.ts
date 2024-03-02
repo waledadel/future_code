@@ -1,17 +1,18 @@
 import { Component, HostListener } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   standalone: true,
-  imports: []
+  imports: [RouterModule]
 })
 export class HeaderComponent {
 
   data = {
     courseName: 'Angular for Beginner Course!',
-    lessonName: 'Learn Angular in Arabic #31- Angular Routing - Essential Concepts'
+    lessonName: 'Learn Angular in Arabic #32- Control navigation with UI elements'
   };
 
   isNavbarFixed = false;
