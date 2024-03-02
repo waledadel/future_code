@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
@@ -15,4 +15,14 @@ export class AppComponent {
     courseName: 'Angular for Beginner Course!',
     lessonName: '31- Using Angular routes in a single-page application'
   };
+
+  isNavbarFixed = false;
+
+  @HostListener('window:scroll', ['$event']) onScroll() {
+    if (window.scrollY > 50) {
+      this.isNavbarFixed = true;
+    } else {
+      this.isNavbarFixed = false;
+    }
+  }
 }

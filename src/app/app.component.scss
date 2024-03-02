@@ -29,3 +29,18 @@ li {
     background: rgb(39, 39, 39);
     border-radius: 2px;
 }
+
+.header {
+    background-color: #000;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid red;
+    right: 0;
+    left: 0;
+    padding: 0.5rem;
+    z-index: 2;
+}
