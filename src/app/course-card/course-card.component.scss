@@ -11,10 +11,16 @@
     user-select: none;
 }
 
-.beginner {
-    background-color: lightblue;
-}
-
-.advanced {
-    background-color: gold;
+.course-category-badge {
+    padding: 5px 45px;
+    transform: rotateZ(-45deg);
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    left: -55px;
+    right: -55px;
+    top: 25px;
+    color: #ffffff;
+    font-size: 0.938rem;
+    z-index: 1;
 }

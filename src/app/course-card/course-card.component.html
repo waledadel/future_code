@@ -1,34 +1,32 @@
-<div class="course-card rounded text-center my-2">
+<div class="course-card rounded text-center my-2 position-relative overflow-hidden">
     <div class="fw-bold p-2 course-title">
-        <h4 class="text-danger">{{title}}</h4>
-        {{index}}: {{course.description}}
-       <div>
-        <ng-content />
-       </div>
-       <app-child-view />
+        {{course.description}}
     </div>
     <div>
         <img [src]="course.imageUrl" alt="course_image" class="w-100 course_image" />
     </div>
-    <div class="course-description p-2 text-start">
+    <div class="course-description p-2 text-start text-truncate">
         {{course.longDescription}}
     </div>
 
-    @switch(course.category) {
-        @case (categoryType.beginners) {
-            <span class="badge bg-warning">Beginners</span>
+    <span class="course-category-badge top-left" [style.background-color]="backgroundColor">
+        @switch(course.category) {
+            @case (categoryType.beginners) {
+                Beginners
+            }
+            @case (categoryType.intermediate) {
+                Intermediate
+            }
+            @case (categoryType.advanced) {
+                Advanced
+            }
+            @default {
+                Other
+            }
         }
-        @case (categoryType.intermediate) {
-            <span class="badge bg-info">Intermediate</span>
-        }
-        @case (categoryType.advanced) {
-            <span class="badge bg-success">Advanced</span>
-        }
-        @default {
-            <span class="badge bg-danger">Other</span>
-        }
-    }
-    <div class="p-2">
-        <button class="btn btn-primary" (click)="viewCourse()">View Course</button>
+    </span>
+
+    <div class="px-2 pt-2 pb-4">
+        <button class="btn btn-outline-primary" (click)="viewCourse()">View Course</button>
     </div>
 </div>

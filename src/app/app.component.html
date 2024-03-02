@@ -1,7 +1,26 @@
 <div class="p-2 text-light d-flex flex-column channel-name">
-    <h1 class="text-center">Coding from A to Z</h1>
-    <h2 class="text-center">{{data.courseName}}</h2>
-    <ng-container>{{data.lessonName}}</ng-container>
+    <div class="d-flex justify-content-between">
+        <div class="text-danger">Coding from A to Z</div>
+        <div class="text-warning">{{data.courseName}}</div>
+    </div>
+    <hr class="my-2">
+    <div class="d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">{{data.lessonName}}</h5>
+        <nav>
+            <ul class="d-flex p-0 m-0">
+                <li class="d-flex">
+                    <a class="nav-link d-flex p-0">
+                        <span class="nav-link-inner">Home</span>
+                    </a>
+                </li>
+                <li class="d-flex">
+                    <a class="nav-link d-flex p-0">
+                        <span class="nav-link-inner">Course List</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
 
 <router-outlet></router-outlet>
