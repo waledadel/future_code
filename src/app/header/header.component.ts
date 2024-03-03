@@ -12,7 +12,7 @@ export class HeaderComponent {
 
   data = {
     courseName: 'Angular for Beginner Course!',
-    lessonName: 'Learn Angular 17 in Arabic | #34- Angular Routing Parameters - Required Parameters'
+    lessonName: 'Learn Angular 17 in Arabic | #35- Accessing Angular Route Params - All Access Methods'
   };
 
   isNavbarFixed = false;
