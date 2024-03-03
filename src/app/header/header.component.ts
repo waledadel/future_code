@@ -12,7 +12,7 @@ export class HeaderComponent {
 
   data = {
     courseName: 'Angular for Beginner Course!',
-    lessonName: 'Learn Angular 17 in Arabic | #33- Angular Routing - Implementing Redirect & Wildcard notation (404) Pages'
+    lessonName: 'Learn Angular 17 in Arabic | #34- Angular Routing Parameters - Required Parameters'
   };
 
   isNavbarFixed = false;
@@ -24,5 +24,4 @@ export class HeaderComponent {
       this.isNavbarFixed = false;
     }
   }
-
 }

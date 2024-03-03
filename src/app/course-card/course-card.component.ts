@@ -1,20 +1,20 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 import { CategoryType, ICourse } from './../app.component.models';
 import { ChildViewComponent } from '../child-view/child-view.component';
 
 @Component({
   selector: 'app-course-card',
-  standalone: true,
-  imports: [CommonModule, ChildViewComponent],
   templateUrl: './course-card.component.html',
-  styleUrl: './course-card.component.scss'
+  styleUrl: './course-card.component.scss',
+  standalone: true,
+  imports: [CommonModule, ChildViewComponent]
 })
-export class CourseCardComponent implements OnInit {
+export class CourseCardComponent {
 
   categoryType = CategoryType;
-  // backgroundColor: string = '#fa7901';
 
   get backgroundColor(): string {
     const defaultColor = '#fa7901';
@@ -34,20 +34,16 @@ export class CourseCardComponent implements OnInit {
     }
   }
 
-  @Input({required: true}) course: ICourse = {} as ICourse;
-  @Input({required: true}) index!: number;
-  @Output('viewCourseEvent') viewCourseEventEmitter = new EventEmitter<ICourse>();
+  @Input({required: true}) course!: ICourse;
 
-  viewCourse(): void {
-    this.viewCourseEventEmitter.emit(this.course);
+
+  constructor(private router: Router) {
+
   }
 
-  ngOnInit(): void {
-    // if (this.course) {
-    //   switch(this.course.category) {
-    //     case this.categoryType.intermediate:
 
-    //   }
-    // }
+  viewCourse(): void {
+    // this.router.navigateByUrl(`course-details/${this.course.id}`);
+    this.router.navigate([`course-details/${this.course.id}`]);
   }
 }
